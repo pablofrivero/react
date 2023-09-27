@@ -1,17 +1,16 @@
-import { useState } from "react";
-import confetti from "canvas-confetti";
+import { useState } from 'react';
+import confetti from 'canvas-confetti';
 
-import { Square } from "./components/Square.jsx";
-import {TURNS}  from "./constant.jsx";
-import {checkWinnerFrom,checkEndGame} from "./logic/board.jsx";
-import { WinnerModal } from "./components/WinnerModal.jsx";
+import { Square } from './components/Square.jsx';
+import { TURNS } from './constant.jsx';
+import { checkWinnerFrom,checkEndGame } from './logic/board.jsx';
+import { WinnerModal } from './components/WinnerModal.jsx';
 import { saveGameToStorage, resetGameStorage } from './logic/storage/index.js'
-
 
 function App () {
   const [board, setBoard] = useState(() => {
- //   const boardFromStorage = window.localStorage.getItem('board')
-   // if (boardFromStorage) return JSON.parse(boardFromStorage)
+  //   const boardFromStorage = window.localStorage.getItem('board')
+  // if (boardFromStorage) return JSON.parse(boardFromStorage)
     return Array(9).fill(null)
   })
 
